@@ -1,8 +1,9 @@
 name = "SINNLS"
 uuid = "93fee547-677c-4488-936b-98036d057900"
-authors = ["Jelena Diakonikolas <jelena@cs.wisc.edu>", "Swati Padmanabhan <
-      pswati@uw.edu>", "Chenghui Li <cli539@wisc.edu>", "Chaobing Song 
-<chaobing.song@wisc.edu>"]
+authors = ["Jelena Diakonikolas <jelena@cs.wisc.edu>",
+	   "Swati Padmanabhan <pswati@uw.edu>",
+           "Chenghui Li <cli539@wisc.edu>",
+           "Chaobing Song <chaobing.song@wisc.edu>"]
 version = "0.1.0"
 
 [deps]
