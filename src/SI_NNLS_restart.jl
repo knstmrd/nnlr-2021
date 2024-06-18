@@ -1,6 +1,6 @@
 using IterativeSolvers
 
-function SI_NNLS_restart(C::SparseMatrixCSC, b::Vector{Float64}, C_b::Vector{Float64}, x0::Vector{Float64}, C_x0::Vector{Float64}, blocksize::Int64, K::Int64, total_time::Float64,
+function SI_NNLS_restart(C, b::Vector{Float64}, C_b::Vector{Float64}, x0::Vector{Float64}, C_x0::Vector{Float64}, blocksize::Int64, K::Int64, total_time::Float64,
                                         num_restart::Int64, freq::Int64, restart_ratio::Float64, file_path::String, ϵ)
     t1 = time()
     results = Results()
@@ -28,7 +28,7 @@ function SI_NNLS_restart(C::SparseMatrixCSC, b::Vector{Float64}, C_b::Vector{Flo
 end
 
 
-function SI_NNLS(C::SparseMatrixCSC, b::Vector{Float64}, C_b::Vector{Float64}, x0::Vector{Float64}, C_x0::Vector{Float64}, blocks::Array{UnitRange{Int}}, row_idxs::Array{Vector{Int}}, sliced_Cs, ηs, K::Int64, total_time::Float64, freq::Int64, init_metric::Float64, results::Results, init_epoch::Int64, init_time::Float64, restart_ratio, ϵ, col_norm_square)
+function SI_NNLS(C, b::Vector{Float64}, C_b::Vector{Float64}, x0::Vector{Float64}, C_x0::Vector{Float64}, blocks::Array{UnitRange{Int}}, row_idxs::Array{Vector{Int}}, sliced_Cs, ηs, K::Int64, total_time::Float64, freq::Int64, init_metric::Float64, results::Results, init_epoch::Int64, init_time::Float64, restart_ratio, ϵ, col_norm_square)
 
     t0 = time()
     m, n = size(C)
