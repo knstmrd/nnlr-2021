@@ -3,8 +3,8 @@ using Dates
 using Logging
 using CSV
 
-include("src/utils.jl")
-include("src/SI_NNLS_restart.jl")
+include("utils.jl")
+include("SI_NNLS_restart.jl")
 
 DATASET_INFO = Dict([
     ("mnist", (60000, 780, "data/mnist")),
